@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Yugantar Raut: creative manager, media operations lead and director. Creative direction, content production pipelines, brand growth and AI-first workflows.">
+<meta property="og:title" content="Yugantar Raut Portfolio">
+<meta property="og:description" content="Creative manager, media operations lead and director at Y R Studios.">
+<meta property="og:type" content="website">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Yugantar Raut Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single editorial column. Giant condensed headline beside a film-slate card, a proof strip, then discipline list, pipeline strip, work ledger, timeline, skills, contact. */
+:root {
+  --bg: #fffdfb;
+  --surface: #fff1e6;
+  --ink: #1b1410;
+  --muted: #6a5b51;
+  --line: #ecdfd5;
+  --accent: #ea580c;
+  --accent-ink: #b8420a;
+  --on-accent: #1b1410;
+  --f-display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+  --f-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14100d; --surface: #201813; --ink: #f6efe9; --muted: #b3a69c; --line: #342a23;
+    --accent: #ff7a2f; --accent-ink: #ff9a5c; --on-accent: #14100d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14100d; --surface: #201813; --ink: #f6efe9; --muted: #b3a69c; --line: #342a23;
+  --accent: #ff7a2f; --accent-ink: #ff9a5c; --on-accent: #14100d; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 0 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.mark { font-family: var(--f-display); font-weight: 800; font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; }
+.mark span { color: var(--accent-ink); }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.top nav a { text-decoration: none; color: var(--muted); padding-block: 8px; }
+.top nav a:hover { color: var(--accent-ink); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr); gap: 40px 56px; align-items: start; padding-block: 56px 48px; }
+.hero h2 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(3.4rem, 9.5vw, 7.6rem); line-height: 0.9; letter-spacing: -0.005em; }
+.hero h2 em { font-style: normal; color: var(--accent); }
+.lede { margin-top: 28px; max-width: 56ch; font-size: 1.15rem; color: var(--muted); }
+.lede strong { color: var(--ink); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.btn { display: inline-block; padding: 13px 22px; font-weight: 700; text-decoration: none; border: 2px solid var(--ink); }
+.btn.fill { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.btn.fill:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn.line:hover { background: var(--ink); color: var(--bg); }
+
+.slate { border: 2px solid var(--ink); background: var(--surface); }
+.intro { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 44px; }
+.avatar { --av: clamp(170px, 44vw, 230px); width: calc(var(--av) + 56px); height: calc(var(--av) + 56px); border-radius: 50%; background: var(--surface); box-shadow: 0 0 0 1px var(--line); display: grid; place-items: center; }
+.avatar img { display: block; width: var(--av); height: var(--av); border-radius: 50%; object-fit: cover; object-position: center 6%; border: 4px solid var(--accent); background: var(--surface); }
+.hi { margin-top: 22px; color: var(--muted); font-size: 1.1rem; }
+.name { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 1; margin-top: 4px; }
+.intro + .hero { padding-top: 40px; }
+.slate-top { height: 30px; background: repeating-linear-gradient(-45deg, var(--ink) 0 15px, var(--bg) 15px 30px); border-bottom: 2px solid var(--ink); }
+.slate dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.slate .cell { padding: 14px 16px; border-bottom: 2px solid var(--ink); min-width: 0; }
+.slate .cell:nth-child(odd) { border-right: 2px solid var(--ink); }
+.slate .wide { grid-column: 1 / -1; border-right: 0 !important; }
+.slate .cell:last-child, .slate .cell:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
+.slate dt { color: var(--accent-ink); margin-bottom: 4px; }
+.slate dd { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: 1.55rem; line-height: 1.1; text-transform: uppercase; overflow-wrap: anywhere; }
+
+/* proof strip */
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.proof div { padding: 22px 18px 22px 0; }
+.proof b { display: block; font-family: var(--f-display); font-weight: 900; font-size: 3.4rem; line-height: 1; color: var(--accent-ink); }
+.proof span { display: block; margin-top: 6px; color: var(--muted); font-size: 0.9rem; max-width: 24ch; }
+
+section { padding-block: 72px 0; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 12px 40px; margin-bottom: 36px; align-items: end; }
+.sec-head h2 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 0.95; }
+.sec-head p { color: var(--muted); max-width: 54ch; }
+
+/* disciplines */
+.disc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.disc article { padding-block: 24px; border-top: 1px solid var(--line); }
+.disc h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.9rem; text-transform: uppercase; line-height: 1.05; }
+.disc p { margin-top: 10px; color: var(--muted); max-width: 52ch; }
+.disc .mono { margin-top: 14px; color: var(--accent-ink); display: block; line-height: 1.8; }
+
+/* pipeline */
+.pipe { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1px; border: 2px solid var(--ink); background: var(--line); counter-reset: step; }
+.pipe li { padding: 18px 14px 20px; background: var(--surface); min-width: 0; counter-increment: step; }
+.pipe li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--f-mono); font-size: 12px; color: var(--accent-ink); margin-bottom: 10px; }
+.pipe h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 1.35rem; line-height: 1.05; overflow-wrap: anywhere; }
+.pipe p { margin-top: 8px; font-family: var(--f-mono); font-size: 11.5px; line-height: 1.55; color: var(--muted); overflow-wrap: anywhere; }
+.pipe-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; margin-top: 28px; }
+.pipe-notes p { color: var(--muted); max-width: 56ch; }
+.pipe-notes b { color: var(--ink); }
+
+/* work */
+.group { margin-top: 36px; }
+.group:first-of-type { margin-top: 0; }
+.group > h3 { color: var(--accent-ink); padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.7fr) minmax(0, 1.4fr); gap: 4px 28px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.row h4 { margin: 0; font-family: var(--f-display); font-weight: 800; font-size: 1.6rem; text-transform: uppercase; line-height: 1.05; }
+.row .kind { color: var(--muted); }
+.row p { color: var(--muted); }
+
+/* timeline */
+.tl { margin: 0; padding: 0; list-style: none; }
+.tl li { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2.2fr); gap: 8px 40px; padding-block: 26px; border-top: 1px solid var(--line); }
+.tl li:first-child { border-top: 2px solid var(--ink); }
+.tl .yr { color: var(--accent-ink); }
+.tl h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.8rem; text-transform: uppercase; line-height: 1.05; }
+.tl .org { color: var(--muted); margin-top: 4px; }
+.tl ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); display: grid; gap: 8px; max-width: 70ch; }
+.tl ul b { color: var(--ink); font-weight: 600; }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.skills section { padding: 22px 0; border-top: 1px solid var(--line); }
+.skills h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chips li { padding: 4px 11px; border: 1px solid var(--line); background: var(--surface); font-size: 0.9rem; }
+.tools { margin-top: 28px; padding: 18px 20px; background: var(--surface); border-left: 4px solid var(--accent); }
+.tools .mono { color: var(--accent-ink); display: block; margin-bottom: 6px; }
+
+.edu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 40px; }
+.edu div { padding-top: 16px; border-top: 2px solid var(--ink); }
+.edu h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.4rem; text-transform: uppercase; line-height: 1.1; }
+.edu p { color: var(--muted); margin-top: 6px; }
+
+/* contact */
+.contact { background: var(--ink); color: var(--bg); padding: 48px clamp(20px, 4vw, 48px); margin-top: 72px; }
+.contact h2 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(2.6rem, 6.5vw, 5rem); line-height: 0.92; }
+.contact h2 em { font-style: normal; color: var(--accent); }
+.contact .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 32px 56px; margin-top: 32px; }
+.contact p { opacity: 0.8; max-width: 52ch; }
+.contact ul.roles { margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.contact ul.roles li { border: 1px solid var(--bg); padding: 4px 11px; font-size: 0.9rem; opacity: 0.9; }
+.reach { display: grid; gap: 18px; align-content: start; }
+.reach .item { min-width: 0; }
+.reach .mono { color: var(--accent); display: block; margin-bottom: 2px; }
+.reach .val { font-size: 1.15rem; font-weight: 600; overflow-wrap: anywhere; }
+.reach a.val { text-decoration-color: var(--accent); text-underline-offset: 4px; }
+.copy { margin-top: 6px; font: inherit; font-size: 0.85rem; font-weight: 600; padding: 6px 12px; cursor: pointer; background: transparent; color: var(--bg); border: 1px solid var(--bg); }
+.copy:hover { background: var(--accent); color: #14100d; border-color: var(--accent); }
+
+footer { padding-top: 28px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--muted); }
+
+@media (min-width: 1400px) { .wrap { max-width: 1240px; } }
+@media (max-width: 1040px) {
+  .hero { gap: 32px 40px; }
+  .pipe { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pipe li:last-child { grid-column: span 2; }
+}
+@media (max-width: 900px) {
+  .hero, .sec-head, .disc, .skills, .pipe-notes, .contact .grid { grid-template-columns: minmax(0, 1fr); }
+  .hero { gap: 36px; }
+  .slate { max-width: 480px; }
+  .disc, .skills { gap: 0; }
+  .pipe-notes { gap: 20px; }
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .tl li { grid-template-columns: minmax(0, 1fr); }
+  section { padding-top: 56px; }
+}
+@media (max-width: 640px) {
+  .pipe { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pipe li:last-child { grid-column: 1 / -1; }
+  .edu { grid-template-columns: minmax(0, 1fr); }
+  .top { padding-block: 12px; }
+  .btn { flex: 1 1 auto; text-align: center; }
+  .contact { padding-block: 36px; margin-top: 56px; }
+  section { padding-top: 48px; }
+}
+@media (max-width: 440px) {
+  .slate dl { grid-template-columns: minmax(0, 1fr); }
+  .slate .cell:nth-child(odd) { border-right: 0; }
+  .slate .cell:nth-last-child(2):nth-child(odd) { border-bottom: 2px solid var(--ink); }
+  .pipe { grid-template-columns: minmax(0, 1fr); }
+  .pipe li:last-child { grid-column: auto; }
+  .proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proof div:last-child { grid-column: 1 / -1; }
+  .proof b { font-size: 2.8rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top" id="top">Yugantar <span>Raut</span></a>
+    <nav class="mono" aria-label="Sections">
+      <a href="#disciplines">Disciplines</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <div class="avatar"><img src="portrait.jpg" width="880" height="1100" alt="Portrait of Yugantar Raut"></div>
+    <p class="hi">Hi, I'm</p>
+    <h1 class="name">Yugantar Raut</h1>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h2>From script to <em>scale</em></h2>
+      <p class="lede"><strong>Creative manager, media operations lead and director.</strong> I run the whole pipeline: concept, production, post, and the campaigns that carry the work. Eight years across filmmaking, performance marketing and AI-first production, based in Pune.</p>
+      <div class="cta">
+        <a class="btn fill" href="#work">See the work</a>
+        <a class="btn line" href="https://www.linkedin.com/in/yuganter-raut" rel="noopener">LinkedIn profile</a>
+      </div>
+    </div>
+    <aside class="slate" aria-label="Profile at a glance">
+      <div class="slate-top"></div>
+      <dl>
+        <div class="cell wide"><dt class="mono">Production</dt><dd>Y R Studios</dd></div>
+        <div class="cell wide"><dt class="mono">Role</dt><dd>Creative Manager &amp; Media Operations Lead</dd></div>
+        <div class="cell"><dt class="mono">Scene</dt><dd>Pune / Mumbai</dd></div>
+        <div class="cell"><dt class="mono">Roll</dt><dd>8+ years</dd></div>
+        <div class="cell"><dt class="mono">Take</dt><dd>Hybrid, remote</dd></div>
+        <div class="cell"><dt class="mono">Languages</dt><dd>Marathi, Hindi, English</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="proof" role="list">
+    <div role="listitem"><b>40+</b><span>client portfolios run across tech, e-learning and corporate</span></div>
+    <div role="listitem"><b>150+</b><span>creative, digital and commercial assignments delivered</span></div>
+    <div role="listitem"><b>3.8x</b><span>or better return on ad spend across paid media</span></div>
+    <div role="listitem"><b>28%</b><span>lower customer acquisition cost</span></div>
+    <div role="listitem"><b>60%</b><span>faster creative turnaround through AI and automation</span></div>
+  </div>
+
+  <section id="disciplines">
+    <div class="sec-head">
+      <h2>What I run</h2>
+      <p>Five jobs that usually sit with five different vendors. I own them as one system, so a script, a shoot day and an ad budget answer to the same plan.</p>
+    </div>
+    <div class="disc">
+      <article>
+        <h3>Creative direction</h3>
+        <p>Concept, script structure, multi-camera set layout and live direction for films, web series, ad films and documentaries. I lead the crew and keep the story and the brief in the same room.</p>
+        <span class="mono">Scriptwriting · Cinematography · Directing</span>
+      </article>
+      <article>
+        <h3>Media operations</h3>
+        <p>Studio workflows, production planning, asset trafficking and delivery schedules for several client accounts at once. Weekly performance cadences and KPI tracking keep the squads honest.</p>
+        <span class="mono">Studio ops · Production planning · Agency management</span>
+      </article>
+      <article>
+        <h3>Content production pipelines</h3>
+        <p>Repeatable paths from brief to published asset: editing, VFX, colour, Dolby mixing and multi-platform distribution, with creative teams working in parallel instead of in a queue.</p>
+        <span class="mono">Post-production · Audio mastering · Distribution</span>
+      </article>
+      <article>
+        <h3>Brand growth and performance</h3>
+        <p>Full-funnel strategy for brands and public campaigns. Paid media on Meta and Google, landing pages built for conversion, and search work that reaches answer engines as well as classic results.</p>
+        <span class="mono">Meta Ads · Google Ads · CRO · SEO · AEO · GEO</span>
+      </article>
+      <article>
+        <h3>AI-first systems</h3>
+        <p>Generative tools for pre-visualisation and ideation, with automations that route assets and leads. Less time on first drafts, more time on the work that needs a human eye.</p>
+        <span class="mono">Runway · Midjourney · Gemini · Make · Zapier · n8n</span>
+      </article>
+      <article>
+        <h3>Training and leadership</h3>
+        <p>Empanelled expert trainer with MCED and the Udyog Vibhag, Government of Maharashtra. I teach digital media, design, camera craft and online business scaling to local innovators and students.</p>
+        <span class="mono">Workshops · Team leadership · Mentoring</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="sec-head">
+      <h2>The pipeline</h2>
+      <p>One production line, owned end to end. These are the stages and the tools I run each one with.</p>
+    </div>
+    <ol class="pipe">
+      <li><h3>Script and concept</h3><p>Outline, treatment, AI pre-vis</p></li>
+      <li><h3>Shoot</h3><p>Multi-cam, lighting, lens plan</p></li>
+      <li><h3>Edit</h3><p>DaVinci Resolve, Premiere Pro, Final Cut Pro</p></li>
+      <li><h3>VFX and animation</h3><p>After Effects, 2D/3D, motion graphics</p></li>
+      <li><h3>Colour</h3><p>DaVinci Resolve grade</p></li>
+      <li><h3>Sound</h3><p>Fairlight, Audition, Dolby mix</p></li>
+      <li><h3>Distribute and measure</h3><p>Meta, Google Ads, YouTube, OTT</p></li>
+    </ol>
+    <div class="pipe-notes">
+      <p><b>The AI layer.</b> Runway, Midjourney, Google Flow, Gemini and ChatGPT feed pre-visualisation, concept outlines and campaign visuals before a camera rolls.</p>
+      <p><b>The automation layer.</b> Make, Zapier and n8n move assets between teams and push leads into the CRM, which is where the faster turnaround comes from.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>A short list from more than 150 assignments across Maharashtra.</p>
+    </div>
+
+    <div class="group">
+      <h3 class="mono">Film and series</h3>
+      <div class="row"><h4>Lankasur</h4><span class="kind mono">Premium web series</span><p>Owned the full post-production pipeline: primary edit, VFX assets, 2D and 3D animation, motion graphics and the Dolby sound master.</p></div>
+      <div class="row"><h4>Safarchand</h4><span class="kind mono">Marathi feature film</span><p>Lead video editor and VFX layout designer on a theatrical, multi-narrative love story.</p></div>
+      <div class="row"><h4>Vedyamana Re</h4><span class="kind mono">Marathi feature film</span><p>Supervised post-production management, structural edits and VFX rendering.</p></div>
+      <div class="row"><h4>Virjan</h4><span class="kind mono">Feature film adaptation</span><p>Dubbing director for the Marathi to Banjara version, covering translation, acoustic alignment and speech engineering.</p></div>
+    </div>
+
+    <div class="group">
+      <h3 class="mono">Public and political campaigns</h3>
+      <div class="row"><h4>Nanded Mahanagar Palika election</h4><span class="kind mono">360° digital campaign</span><p>Built and ran the full digital plan: micro-targeted ads, automated voter content flows and candidate branding.</p></div>
+      <div class="row"><h4>District Information Office, Nanded</h4><span class="kind mono">Government media</span><p>Directed and produced more than 30 regional ad films, promotional clips and official communication packages.</p></div>
+      <div class="row"><h4>Mission Gauri, Ghanta Gadi</h4><span class="kind mono">Civic documentaries</span><p>Scripted and shot awareness films for state department channels, including Mission Gauri on third-gender advocacy and a film on plastic encroachment.</p></div>
+    </div>
+
+    <div class="group">
+      <h3 class="mono">Corporate, IT and e-learning</h3>
+      <div class="row"><h4>Y R Studios client portfolios</h4><span class="kind mono">Performance marketing</span><p>More than 40 accounts across tech, e-learning and corporate sectors, delivered at 3.8x or better return on ad spend with customer acquisition cost down 28%.</p></div>
+      <div class="row"><h4>E-learning platforms</h4><span class="kind mono">EdTech production</span><p>Masterclasses, lecture modules and micro-learning animations for professional learning networks.</p></div>
+      <div class="row"><h4>IT and coding academies</h4><span class="kind mono">Brand and ad films</span><p>Full identity work, landing page assets, promotional ad films and brand strategy for technology start-ups.</p></div>
+    </div>
+
+    <div class="group">
+      <h3 class="mono">Music</h3>
+      <div class="row"><h4>Y R Music Company</h4><span class="kind mono">Production and release</span><p>Audio engineering, vocal tuning and mastering, then release on Spotify, Apple Music and YouTube. Singles include Kaise Bana Swaraj, Khamosh Wida and Shiv Tandav.</p></div>
+      <div class="row"><h4>Horpal</h4><span class="kind mono">Short film and score</span><p>Director, lead composer and actor. The track Sonya Rishta Sansar reached more than 200,000 organic views.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head">
+      <h2>Experience</h2>
+      <p>From freelance cinematography to running a multi-client creative and media operation.</p>
+    </div>
+    <ul class="tl">
+      <li>
+        <div class="yr mono">2020 to present</div>
+        <div>
+          <h3>Creative Manager &amp; Media Operations Lead</h3>
+          <p class="org">Y R Studios, Nanded · Director and studio manager</p>
+          <ul>
+            <li>Run 360° media operations, creative campaigns and performance marketing for <b>40+ client portfolios</b>.</li>
+            <li>Built an AI-first creative workflow with Runway, Midjourney, Gemini, ChatGPT, Make and Zapier, cutting asset turnaround by <b>60%</b>.</li>
+            <li>Lead squads across video production, media buying, content operations and design with KPI tracking and weekly performance reviews.</li>
+            <li>Pair paid media with organic search work and conversion-focused landing pages for <b>3.8x+ ROAS</b> and a <b>28% lower CAC</b>.</li>
+            <li>Set up live-streaming infrastructure on OBS Studio with real-time overlays, scene transitions and automated sound mixing.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="yr mono">2020 to present</div>
+        <div>
+          <h3>Digital Media Growth &amp; Operations Consultant</h3>
+          <p class="org">MCED and Udyog Vibhag, Government of Maharashtra · Empanelled expert</p>
+          <ul>
+            <li>Design and deliver training on digital media scaling, operational efficiency and automated client acquisition funnels for regional entrepreneurs, students and businesses.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="yr mono">2018 to 2020</div>
+        <div>
+          <h3>Performance Marketing Lead &amp; Creative Producer</h3>
+          <p class="org">Yugantar Media &amp; Films · DOP, editor and team leader</p>
+          <ul>
+            <li>Directed ad creative production, hook testing and visual storytelling for performance campaigns.</li>
+            <li>Managed delivery schedules, studio logistics, asset trafficking and metrics across several client accounts under tight deadlines.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="yr mono">2017 to 2018</div>
+        <div>
+          <h3>Cinematographer &amp; Editor</h3>
+          <p class="org">Freelance media and film production</p>
+          <ul>
+            <li>Handled negotiations, cost estimates, delivery timelines and content development for more than 20 regional businesses.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head">
+      <h2>Skills</h2>
+      <p>Grouped by the job they do, so a hiring manager can find the right one fast.</p>
+    </div>
+    <div class="skills">
+      <section>
+        <h3>Creative direction and production</h3>
+        <ul class="chips">
+          <li>Creative Direction</li><li>Scriptwriting</li><li>Video Scripts</li><li>Filmmaking</li><li>Cinematography</li><li>Videography</li><li>Video Production</li><li>Promotional Videos</li><li>Training Videos</li><li>Music Video Production</li><li>Television Studio Production</li><li>Live Streaming</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Post-production and audio</h3>
+        <ul class="chips">
+          <li>Post-Production Management</li><li>Video Editing</li><li>VFX</li><li>2D and 3D Animation</li><li>Motion Graphics</li><li>Colour Grading</li><li>Audio Mixing</li><li>Audio Mastering</li><li>Audio Engineering</li><li>Dubbing and Localisation</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Media operations</h3>
+        <ul class="chips">
+          <li>Studio Operations</li><li>Content Production Pipelines</li><li>Production Planning</li><li>Creative Project Management</li><li>Workflow Design</li><li>Agency Management</li><li>Content Management</li><li>KPI Tracking</li><li>High-volume Delivery</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Brand growth and performance</h3>
+        <ul class="chips">
+          <li>Creative Branding</li><li>Brand Strategy</li><li>Content Strategy</li><li>Content Marketing</li><li>Omni-channel Campaigns</li><li>Performance Marketing</li><li>Google Ads</li><li>Meta Ads</li><li>Lead Generation</li><li>Conversion Optimisation</li><li>Marketing Budget and ROI</li><li>Technical SEO</li><li>AEO and GEO</li><li>Political and Public-sector Campaigns</li>
+        </ul>
+      </section>
+      <section>
+        <h3>AI and automation</h3>
+        <ul class="chips">
+          <li>AI Prompting</li><li>Generative Video</li><li>Runway</li><li>Midjourney</li><li>Google Flow</li><li>Gemini</li><li>ChatGPT</li><li>Make</li><li>Zapier</li><li>n8n</li><li>Marketing Automation</li><li>CRM Pipeline Integration</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Leadership and training</h3>
+        <ul class="chips">
+          <li>Team Leadership</li><li>Cross-functional Squads</li><li>Leadership Development</li><li>Workshop Training</li><li>Client Relationship Management</li><li>Creative Problem Solving</li>
+        </ul>
+      </section>
+    </div>
+    <div class="tools">
+      <span class="mono">Tools</span>
+      DaVinci Resolve, Premiere Pro, After Effects, Final Cut Pro, Adobe Animate, Illustrator, CorelDRAW, Audition, Fairlight, Ableton Live, OBS Studio, Google Ads Manager, Meta Ads Manager.
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head">
+      <h2>Education</h2>
+      <p></p>
+    </div>
+    <div class="edu">
+      <div><h3>MBA</h3><p>Market Penetration and Organizational Leadership. Swami Ramanand Teerth Marathwada University, 2025.</p></div>
+      <div><h3>BA</h3><p>Narrative Strategy and Communication. SRTM University, 2018.</p></div>
+      <div><h3>Diploma, Mechanical Engineering</h3><p>Polytechnic, Autonomous Board of Technical Education, 2016.</p></div>
+    </div>
+  </section>
+
+  <div class="contact" id="contact">
+    <h2>Let's build the <em>next one</em></h2>
+    <div class="grid">
+      <div>
+        <p>Open to hybrid and remote roles, and to agency or brand partnerships. I am a fit for:</p>
+        <ul class="roles">
+          <li>Creative Manager</li><li>Media Operations Manager</li><li>Creative Director</li><li>Digital Marketing and Brand Growth Lead</li><li>Lead Digital Producer</li>
+        </ul>
+      </div>
+      <div class="reach">
+        <div class="item">
+          <span class="mono">Email</span>
+          <a class="val" id="email" href="mailto:yuganterraut98@gmail.com">yuganterraut98@gmail.com</a>
+          <div><button class="copy" id="copy-email" type="button">Copy email</button> <span id="copy-note" class="mono" role="status"></span></div>
+        </div>
+        <div class="item"><span class="mono">Phone</span><span class="val">+91 73854 75831</span></div>
+        <div class="item"><span class="mono">LinkedIn</span><a class="val" href="https://www.linkedin.com/in/yuganter-raut" rel="noopener">linkedin.com/in/yuganter-raut</a></div>
+        <div class="item"><span class="mono">Based in</span><span class="val">Pune / Mumbai, India</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mono"><span>Yugantar Raut</span><span>Y R Studios · 2026</span></footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var note = document.getElementById('copy-note');
+  var addr = 'yuganterraut98@gmail.com';
+  function say(t) { note.textContent = t; setTimeout(function () { note.textContent = ''; }, 2500); }
+  btn.addEventListener('click', function () {
+    var fallback = function () {
+      var r = document.createRange();
+      r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      say('Selected, press copy');
+    };
+    try {
+      navigator.clipboard.writeText(addr).then(function () { say('Copied'); }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
